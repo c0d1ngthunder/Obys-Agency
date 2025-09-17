@@ -18,6 +18,17 @@ main {
   background-color: #111111;
 }
 
+#crsr {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  border: 1px solid #ffffff82;
+  position: fixed;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+}
+
 #loader {
   padding: 20vh 10vw;
   width: 100%;
@@ -65,32 +76,35 @@ main {
   font-family: "plain-light";
   font-size: 4.7vw;
   opacity: 0;
-  animation:2s infinite ;
+  animation: 2s infinite;
 }
 
 @keyframes anime {
-  0%{
+  0% {
     font-family: "plain-light";
     -webkit-text-stroke: 1px white;
     color: white;
     font-weight: 500;
     opacity: 1;
   }
-  48%{
+
+  48% {
     font-family: "plain-light";
     -webkit-text-stroke: 1px white;
     color: white;
     font-weight: 500;
     opacity: 0;
   }
-  50%{
+
+  50% {
     font-family: "silkserif-lightitalic";
     -webkit-text-stroke: 1px white;
     color: transparent;
     font-weight: 500;
     opacity: 1;
   }
-  100%{
+
+  100% {
     font-family: "silkserif-lightitalic";
     -webkit-text-stroke: 1px white;
     color: transparent;
@@ -105,4 +119,46 @@ main {
   width: 100%;
   height: 100vh;
   background-color: #151515;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  padding: 6vh 8vw;
+}
+
+.nav-p2 {
+  display: flex;
+  gap: 2vw;
+}
+
+.nav-p2 h2 {
+  font-family: "plain-light";
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+#hero-anime {
+  display: flex;
+}
+
+.hero-text:nth-child(2){
+  margin-top: 10vh;
+}
+
+.hero-text{
+  width: 70%;
+  margin-left: 30%;
+}
+
+.hero-text h1,
+.hero-text h2 {
+  font-size: 7vw;
+  line-height: 7vw;
+  font-family: "plain-light";
+  text-transform: uppercase;
+  font-weight: 700;
 }
