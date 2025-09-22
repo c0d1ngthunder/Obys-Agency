@@ -2,7 +2,7 @@ function loadingAnimation() {
   let tl = gsap.timeline();
 
   tl.from(".line h1", {
-    y: 100,
+    yPercent: 100,
     delay: 0.5,
     duration: 0.6,
     stagger: 0.2,
@@ -38,12 +38,22 @@ function loadingAnimation() {
   });
   tl.from("#page1", {
     delay: 0.2,
-    y: 1600,
+    yPercent: 100,
     opacity: 0,
   });
   tl.to("#loader", {
     display: "none",
   });
+  tl.from(".hero-text h1", {
+    yPercent: 100,
+    duration: 0.8,
+    stagger: 0.3,
+  });
+  tl.from("#hero-anime h2", {
+    yPercent: 100,
+    duration: 0.8,
+    stagger: .3,
+  }, "-=1.2");
 }
 function customCursor(){
   let cursor = document.querySelector("#crsr")

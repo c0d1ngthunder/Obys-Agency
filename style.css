@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   color: white;
+  font-family: "plain-light";
 }
 
 html,
@@ -15,7 +16,8 @@ body {
 
 main {
   position: relative;
-  background-color: #111111;
+  background-color: #151515;
+  overflow-x: hidden;
 }
 
 #crsr {
@@ -138,7 +140,7 @@ nav {
 
 .nav-p2 h2 {
   font-family: "plain-light";
-  font-size: 1vw;
+  font-size: 1.1vw;
   font-weight: 500;
 }
 
@@ -146,20 +148,130 @@ nav {
   display: flex;
 }
 
-.hero-text:nth-child(2){
+.hero-text:nth-child(2) {
   margin-top: 10vh;
 }
 
-.hero-text{
+.hero-text {
   width: 70%;
+  overflow: hidden;
   margin-left: 30%;
 }
 
 .hero-text h1,
 .hero-text h2 {
   font-size: 7vw;
-  line-height: 7vw;
+  line-height: 7.5vw;
   font-family: "plain-light";
   text-transform: uppercase;
   font-weight: 700;
+  letter-spacing: .4vw;
+}
+
+.hero-text h2 {
+  border-bottom: .6vw solid white;
+  padding-bottom: .6vw;
+  /* transition: all ease 0.3s; */
+}
+
+#hero-anime h2:hover {
+  -webkit-text-stroke: 1px white;
+  font-weight: 500;
+  color: transparent;
+  border-bottom: .6vw solid transparent;
+}
+
+/* -----------------------------------page2----------------------------------- */
+
+#page2 {
+  width: 100%;
+  background-color: #151515;
+  height: 100vh;
+}
+
+#vdo-container {
+  width: 70vw;
+  height: 80vh;
+  position: relative;
+  left: 30%;
+}
+
+#vdo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#vdo-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#vdo-cursor{
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  background-color: #FFA63D;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  top: -10%;
+  left: 70%;
+}
+
+#vdo-cursor i{
+  font-size: 2.5vw;
+  color: white;
+}
+
+#page3{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+#page4{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+#page4-content{
+  width: 70vw;
+  position: relative;
+  left: 30%;
+}
+#page4-content h1{
+  text-transform: uppercase;
+  font-size: 7vw;
+
+}
+.underline{
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  margin: 1vw 0;
+}
+#page4-content>p{
+  font-size: 2vw;
+  width: 50%;
+  margin-top: 2vw;
+}
+
+#page4-flex{
+  display: flex;
+}
+
+#page4-flex img{
+  width: 50%;
+}
+#page4-flex div{
+  width: 30%;
+}
+.first{
+  margin-bottom: 1vw;
 }
