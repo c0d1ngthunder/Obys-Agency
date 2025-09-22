@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "plain-light";
+    src: url("/fonts/plain-light-webfont.woff");
+}
+@font-face {
+    font-family: "plain-regular";
+    src: url("/fonts/plain-regular-webfont.woff");
+}
+@font-face {
+    font-family: "silkserif-lightitalic";
+    src: url("/fonts/silkserif-lightitalic-webfont.woff");
+}
+@font-face {
+    font-family: "silkserif-regularitalic";
+    src: url("/fonts/silkserif-regularitalic-webfont.woff");
+}
