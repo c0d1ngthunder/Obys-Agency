@@ -259,8 +259,12 @@ nav {
   background-color: #fff;
   margin: 3vw 0;
 }
+#page4-content .underline{
+  margin: 2vw 0;
+  margin-top: 10vw;
+}
 
-#page4-content>p {
+#page4-content>p:nth-child(3) {
   font-size: 2.4vw;
   width: 52%;
   margin-top: 2vw;
@@ -317,18 +321,26 @@ nav {
 }
 
 #page5 {
+  margin-top: 10vh;
   min-height: 100vh;
   width: 100%;
   position: relative;
 }
 
-.elem,.elem2 {
+#page5 span{
+  font-family: "silkserif-lightitalic";
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+}
+
+.elem,
+.elem2 {
   /* margin-bottom: 1vw; */
   white-space: nowrap;
 }
 
 .elem h1 {
-  font-size: 7vw;
+  font-size: 7.5vw;
   -webkit-text-stroke: 1px #fff;
   color: transparent;
   font-weight: 400;
@@ -336,12 +348,14 @@ nav {
   display: inline-block;
   animation-name: marqueeEffect;
   animation-timing-function: linear;
-  animation-duration: 15s;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
-  margin-right:16px ;
+  margin-right: 16px;
+  line-height: 8vw;
 }
+
 .elem2 h1 {
-  font-size: 7vw;
+  font-size: 7.5vw;
   -webkit-text-stroke: 1px #fff;
   color: transparent;
   font-weight: 400;
@@ -349,17 +363,59 @@ nav {
   display: inline-block;
   animation-name: marqueeEffect;
   animation-timing-function: linear;
-  animation-duration: 15s;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
-  animation-direction:reverse ;
-  margin-right:16px ;
+  animation-direction: reverse;
+  margin-right: 16px;
+  line-height: 8vw;
 }
 
 @keyframes marqueeEffect {
-  from{
+  from {
     transform: translateX(0%);
-  }  
-  to{
+  }
+
+  to {
     transform: translateX(calc(-100% - 20px));
   }
+}
+
+footer {
+  width: 65%;
+  margin-left: 27vw;
+  height: 100vh;
+}
+
+footer>.underline {
+  margin: 2vw 0;
+}
+
+footer>h1 {
+  font-size: 8vw;
+  font-weight: 500;
+  font-family: "plain-regular";
+  text-transform: uppercase;
+}
+
+#footer-div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 4vw 0;
+}
+.box{
+  min-width: 30%;
+}
+.box h5 {
+  font-size: 1.2vw;
+  font-weight: 500;
+  font-family: "plain-regular";
+  margin-bottom: 2vw;
+}
+
+.box h6 {
+  font-size: 1.8vw;
+  font-weight: 500;
+  font-family: "plain-regular";
+  line-height: 2vw;
 }
