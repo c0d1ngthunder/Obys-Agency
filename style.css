@@ -130,17 +130,17 @@ nav {
   justify-content: space-between;
   width: 100%;
   height: fit-content;
-  padding: 6vh 8vw;
+  padding: 6vh 4vw;
 }
 
 .nav-p2 {
   display: flex;
-  gap: 2vw;
+  gap: 2.2vw;
 }
 
 .nav-p2 h2 {
   font-family: "plain-light";
-  font-size: 1.1vw;
+  font-size: 1.13vw;
   font-weight: 500;
 }
 
@@ -148,30 +148,41 @@ nav {
   display: flex;
 }
 
-.hero-text:nth-child(2) {
+.hero-text:nth-child(1) {
   margin-top: 10vh;
+}
+#text{
+  width: 72%;
+  margin-left: 28%;
+  position: relative;
+}
+#text::before {
+  content: "01";
+  position: absolute;
+  font-size: 3.6vw;
+  font-weight: 100;
+  font-family: "silkserif-lightitalic";
+  left: -8%;
 }
 
 .hero-text {
-  width: 70%;
   overflow: hidden;
-  margin-left: 30%;
 }
 
 .hero-text h1,
 .hero-text h2 {
-  font-size: 7vw;
+  font-size: 7.3vw;
   line-height: 7.5vw;
-  font-family: "plain-light";
+  font-family: "plain-regular";
   text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: .4vw;
+  font-weight: 500;
+  /* letter-spacing: .4vw; */
 }
 
 .hero-text h2 {
   border-bottom: .6vw solid white;
   padding-bottom: .6vw;
-  /* transition: all ease 0.3s; */
+  transition: border ease 0.3s;
 }
 
 #hero-anime h2:hover {
@@ -179,6 +190,7 @@ nav {
   font-weight: 500;
   color: transparent;
   border-bottom: .6vw solid transparent;
+  transition: all ease .3s;
 }
 
 /* -----------------------------------page2----------------------------------- */
@@ -186,6 +198,7 @@ nav {
 #page2 {
   width: 100%;
   background-color: #151515;
+  margin-top: 20vh;
   height: 100vh;
 }
 
@@ -251,6 +264,17 @@ nav {
 #page4-content h1 {
   text-transform: uppercase;
   font-size: 8vw;
+  position: relative;
+}
+
+#page4-content h1::before {
+  content: "03";
+  position: absolute;
+  font-size: 3.5vw;
+  font-weight: 100;
+  font-family: "silkserif-lightitalic";
+  top: 5%;
+  left: -10%;
 }
 
 .underline {
@@ -259,7 +283,8 @@ nav {
   background-color: #fff;
   margin: 3vw 0;
 }
-#page4-content .underline{
+
+#page4-content .underline:nth-child(6) {
   margin: 2vw 0;
   margin-top: 10vw;
 }
@@ -327,7 +352,7 @@ nav {
   position: relative;
 }
 
-#page5 span{
+#page5 span {
   font-family: "silkserif-lightitalic";
   -webkit-text-stroke: 1px white;
   color: transparent;
@@ -395,6 +420,7 @@ footer>h1 {
   font-weight: 500;
   font-family: "plain-regular";
   text-transform: uppercase;
+  position: relative;
 }
 
 #footer-div {
@@ -403,9 +429,11 @@ footer>h1 {
   justify-content: space-between;
   margin: 4vw 0;
 }
-.box{
+
+.box {
   min-width: 30%;
 }
+
 .box h5 {
   font-size: 1.2vw;
   font-weight: 500;
@@ -418,4 +446,14 @@ footer>h1 {
   font-weight: 500;
   font-family: "plain-regular";
   line-height: 2vw;
+}
+
+footer>h1::before {
+  content: "04";
+  position: absolute;
+  font-size: 3.5vw;
+  font-weight: 100;
+  font-family: "silkserif-lightitalic";
+  top: 10%;
+  left: -10%;
 }
