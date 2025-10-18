@@ -115,6 +115,33 @@ function customCursor() {
       duration: 0,
     });
   });
+  let vdocontainer = document.querySelector("#vdo-container");
+  vdocontainer.addEventListener("mouseenter", (dets) => {
+    gsap.to("#vdo-cursor", {
+        x: dets.x - (vdocontainer.getBoundingClientRect().width + 100),
+        y: dets.y - vdocontainer.getBoundingClientRect().top,
+        duration:.8
+      });
+    vdocontainer.addEventListener("mousemove", (dets) => {
+      gsap.to("#crsr", {
+        opacity: 0,
+      });
+      gsap.to("#vdo-cursor", {
+        x: dets.x - (vdocontainer.getBoundingClientRect().width + 100),
+        y: dets.y - vdocontainer.getBoundingClientRect().top,
+      });
+    });
+    vdocontainer.addEventListener("mouseleave", () => {
+      gsap.to("#crsr", {
+        opacity: 1,
+      });
+      gsap.to("#vdo-cursor", {
+        x: 0,
+        y: 0,
+        duration: .7,
+      });
+    });
+  });
   Shery.makeMagnet(".links");
 }
 function sheryAnimation() {

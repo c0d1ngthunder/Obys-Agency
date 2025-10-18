@@ -123,7 +123,7 @@ main {
   background-color: #151515;
 }
 
-#page1 p{
+#page1 p {
   font-size: 1vw;
   width: 20%;
   top: 6vh;
@@ -171,11 +171,13 @@ nav {
 .hero-text:nth-child(1) {
   margin-top: 10vh;
 }
-#text{
+
+#text {
   width: 72%;
   margin-left: 28%;
   position: relative;
 }
+
 #text::before {
   content: "01";
   position: absolute;
@@ -287,7 +289,7 @@ nav {
   left: -10%;
 }
 
-#page3 .underline{
+#page3 .underline {
   margin-left: 28%;
 }
 
@@ -295,17 +297,77 @@ nav {
   padding: 1vw;
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-start;
-  flex-wrap: wrap ;
+  flex-wrap: wrap;
 }
 
-.image-div{
-  width: 24vw;
-  height: 33vw;
-  overflow: hidden;
+.page3-circle1 {
+  width: 20vw;
+  height: 20vw;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-top: 30vh;
+  margin-left: 13vw;
+  position: relative;
 }
-.image-div img{
+
+.page3-circle2 {
+  width: 20vw;
+  height: 20vw;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin:0 5vw;
+  position: relative;
+}
+
+.page3-circle1 .circle-in,.page3-circle2 .circle-in {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  scale: 0;
+  transition: all ease .3s;
+}
+
+.circle-in p {
+  font-size: 1vw;
+  color: #000;
+  font-weight: 500;
+  width: 60%;
+  scale: 0;
+  opacity: 0;
+  transition: all ease .3s;
+  transition-delay: .3s;
+}
+
+.page3-circle1:hover .circle-in,.page3-circle2:hover .circle-in{
+  scale: 1;
+}
+.page3-circle1:hover p,.page3-circle2:hover p{
+  scale: 1;
+  opacity: 1;
+}
+
+.image-div {
+  width: 23vw;
+  height: 30vw;
+  overflow: hidden;
+  margin: 2vw;
+}
+
+.image-div:nth-child(2) {
+  width: 27vw;
+  height: 38vw;
+}
+
+.image-div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
