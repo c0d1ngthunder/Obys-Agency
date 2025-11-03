@@ -118,10 +118,10 @@ function customCursor() {
   let vdocontainer = document.querySelector("#vdo-container");
   vdocontainer.addEventListener("mouseenter", (dets) => {
     gsap.to("#vdo-cursor", {
-        x: dets.x - (vdocontainer.getBoundingClientRect().width + 100),
-        y: dets.y - vdocontainer.getBoundingClientRect().top,
-        duration:.8
-      });
+      x: dets.x - (vdocontainer.getBoundingClientRect().width + 100),
+      y: dets.y - vdocontainer.getBoundingClientRect().top,
+      duration: 0.8,
+    });
     vdocontainer.addEventListener("mousemove", (dets) => {
       gsap.to("#crsr", {
         opacity: 0,
@@ -138,7 +138,7 @@ function customCursor() {
       gsap.to("#vdo-cursor", {
         x: 0,
         y: 0,
-        duration: .7,
+        duration: 0.7,
       });
     });
   });
@@ -148,10 +148,10 @@ function sheryAnimation() {
   Shery.imageEffect(".image-div", {
     style: 5,
     config: {
-      a: { value: 2, range: [0, 30] },
-      b: { value: 0.75, range: [-1, 1] },
+      a: { value: 2.06, range: [0, 30] },
+      b: { value: 0.91, range: [-1, 1] },
       zindex: { value: -9996999, range: [-9999999, 9999999] },
-      aspect: { value: 0.7272695760684946 },
+      aspect: { value: 0.7666526861631143 },
       ignoreShapeAspect: { value: true },
       shapePosition: { value: { x: 0, y: 0 } },
       shapeScale: { value: { x: 0.5, y: 0.5 } },
@@ -165,18 +165,18 @@ function sheryAnimation() {
       durationOut: { value: 1, range: [0.1, 5] },
       durationIn: { value: 1.5, range: [0.1, 5] },
       displaceAmount: { value: 0.5 },
-      masker: { value: true },
-      maskVal: { value: 1.27, range: [1, 5] },
+      masker: { value: false },
+      maskVal: { value: 1, range: [1, 5] },
       scrollType: { value: 0 },
       geoVertex: { range: [1, 64], value: 1 },
       noEffectGooey: { value: true },
-      onMouse: { value: 0 },
-      noise_speed: { value: 0.69, range: [0, 10] },
-      metaball: { value: 0.43, range: [0, 2] },
-      discard_threshold: { value: 0.49, range: [0, 1] },
+      onMouse: { value: 1 },
+      noise_speed: { value: 0.2, range: [0, 10] },
+      metaball: { value: 0.56, range: [0, 2] },
+      discard_threshold: { value: 0.5, range: [0, 1] },
       antialias_threshold: { value: 0, range: [0, 0.1] },
-      noise_height: { value: 0.5, range: [0, 2] },
-      noise_scale: { value: 9.16, range: [0, 100] },
+      noise_height: { value: 0.34, range: [0, 2] },
+      noise_scale: { value: 9.92, range: [0, 100] },
     },
     gooey: true,
   });
