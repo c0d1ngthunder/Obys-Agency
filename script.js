@@ -114,8 +114,26 @@ function customCursor() {
       y: dets.y - cursor.getBoundingClientRect().height / 2,
       duration: 0,
     });
+    gsap.to("#flag", {
+      x: dets.x,
+      y: dets.y,
+      duration: .3,
+    });
+    document.querySelector("#hero-anime").addEventListener("mousemove", () => {
+      gsap.to("#flag", {
+        opacity: 1,
+        duration: 0.5,
+      });
+    });
+    document.querySelector("#hero-anime").addEventListener("mouseleave", () => {
+      gsap.to("#flag", {
+        opacity: 0,
+        duration: 0.5,
+      });
+    });
   });
   let vdocontainer = document.querySelector("#vdo-container");
+  let vdo = document.querySelector("#vdo-container video");
   vdocontainer.addEventListener("mouseenter", (dets) => {
     gsap.to("#vdo-cursor", {
       x: dets.x - (vdocontainer.getBoundingClientRect().width + 100),
@@ -131,6 +149,27 @@ function customCursor() {
         y: dets.y - vdocontainer.getBoundingClientRect().top,
       });
     });
+    vdocontainer.addEventListener("click", () => {
+      if (vdo.paused) {
+        vdo.style.opacity = 1;
+        vdocontainer.querySelector("img").style.display = "none";
+        document.querySelector("#vdo-cursor").innerHTML = `<i class="ri-pause-fill"></i>`;
+        gsap.to("#vdo-cursor", {
+          scale:.5,
+          duration:0.5,
+        })
+        vdo.play();
+      } else {
+        vdocontainer.querySelector("img").style.display = "inline-block";
+        vdo.pause();
+        document.querySelector("#vdo-cursor").innerHTML = `<i class="ri-play-fill"></i>`;
+        gsap.to("#vdo-cursor", {
+          scale:1,
+          duration:0.5,
+        })
+        vdo.style.opacity = 0;
+      }
+    });
     vdocontainer.addEventListener("mouseleave", () => {
       gsap.to("#crsr", {
         opacity: 1,
@@ -140,6 +179,28 @@ function customCursor() {
         y: 0,
         duration: 0.7,
       });
+    });
+  });
+
+  let projects = document.querySelector(".all-projects");
+  projects.addEventListener("mouseenter", () => {
+    gsap.to(cursor, {
+      scale: 1.3,
+      duration: 0.5,
+    });
+    gsap.to(projects, {
+      scale: .8,
+      duration: 0.5,
+    });
+  });
+  projects.addEventListener("mouseleave", () => {
+    gsap.to(cursor, {
+      scale: 1,
+      duration: 0.5,
+    });
+    gsap.to(projects, {
+      scale: 1,
+      duration: 0.5,
     });
   });
   Shery.makeMagnet(".links");

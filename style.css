@@ -303,12 +303,12 @@ nav {
 }
 
 .page3-circle1 {
-  width: 20vw;
-  height: 20vw;
+  width: 25vw;
+  height: 25vw;
   border: 2px solid #fff;
   border-radius: 50%;
   margin-top: 30vh;
-  margin-left: 13vw;
+  margin-left: 7vw;
   position: relative;
   display: flex;
   align-items: center;
@@ -316,11 +316,11 @@ nav {
 }
 
 .page3-circle2 {
-  width: 20vw;
-  height: 20vw;
+  width: 25vw;
+  height: 25vw;
   border: 2px solid #fff;
   border-radius: 50%;
-  margin:0 5vw;
+  margin:0 1vw;
   position: relative;
   display: flex;
   align-items: center;
@@ -342,8 +342,13 @@ nav {
   transition: all ease .3s;
 }
 
-.page3-circle1 svg,.page3-circle2 svg{
+.page3-circle1 svg {
   height: 8vw;
+}
+
+.page3-circle2 svg{
+  height: 8vw;
+  transform: rotate(-45deg);
 }
 
 .circle-in p {
@@ -379,15 +384,34 @@ nav {
 
 .image-div:nth-child(5),
 .image-div:nth-child(6) {
-  margin-top: 20vw;
   width: 27vw;
   height: 38vw;
+}
+.image-div:nth-child(5) {
+  margin-top: 15vw;
 }
 
 .image-div img {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.all-projects {
+  font-size: 1vw;
+  font-weight: 500;
+  font-family: "plain-regular";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFA63D;
+  position: relative;
+  left: 50vw;
+  transform: translateX(-50%);
+  margin-top: 5vw;
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
 }
 
 #page4 {
@@ -603,4 +627,16 @@ footer>h1::before {
 ._canvas_container {
   z-index: 99999 !important;
   pointer-events: none;
+}
+
+#flag{
+  height: 18vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease .3s;
+  z-index: -1;
 }
