@@ -1,8 +1,5 @@
 function initScroll() {
   gsap.registerPlugin(ScrollTrigger);
-
-  // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
-
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("main"),
     smooth: true,
@@ -108,15 +105,16 @@ function loadingAnimation() {
 }
 function customCursor() {
   let cursor = document.querySelector("#crsr");
+  let flag = document.querySelector("#flag");
   document.addEventListener("mousemove", (dets) => {
     gsap.to(cursor, {
       x: dets.x - cursor.getBoundingClientRect().width / 2,
       y: dets.y - cursor.getBoundingClientRect().height / 2,
       duration: 0,
     });
-    gsap.to("#flag", {
-      x: dets.x,
-      y: dets.y,
+    gsap.to(flag, {
+      x: dets.x - flag.getBoundingClientRect().width / 2,
+      y: dets.y - flag.getBoundingClientRect().height / 2,
       duration: .3,
     });
     document.querySelector("#hero-anime").addEventListener("mousemove", () => {
