@@ -67,15 +67,10 @@ function loadingAnimation() {
   });
 
   tl.to("#loader", {
-    opacity: 0,
-    //   yPercent: -100,
-    duration: 0.8,
+    yPercent: -100,
+    duration: .5,
+    ease:"none",
     delay: 3.4,
-  });
-  tl.from("#page1", {
-    delay: 0.2,
-    yPercent: 100,
-    opacity: 0,
   });
   tl.to("#loader", {
     display: "none",
@@ -84,7 +79,7 @@ function loadingAnimation() {
     yPercent: 100,
     duration: 0.8,
     stagger: 0.3,
-  });
+  },"-=.8");
   tl.from(
     "#hero-anime h2",
     {
@@ -107,6 +102,8 @@ function customCursor() {
   let cursor = document.querySelector("#crsr");
   let flag = document.querySelector("#flag");
   document.addEventListener("mousemove", (dets) => {
+    
+    // console.log(flag.getBoundingClientRect().left);
     gsap.to(cursor, {
       x: dets.x - cursor.getBoundingClientRect().width / 2,
       y: dets.y - cursor.getBoundingClientRect().height / 2,
@@ -117,17 +114,17 @@ function customCursor() {
       y: dets.y - flag.getBoundingClientRect().height / 2,
       duration: .3,
     });
-    document.querySelector("#hero-anime").addEventListener("mousemove", () => {
-      gsap.to("#flag", {
-        opacity: 1,
-        duration: 0.5,
-      });
+  });
+  document.querySelector("#hero-anime").addEventListener("mousemove", () => {
+    gsap.to("#flag", {
+      opacity: 1,
+      duration: .2,
     });
-    document.querySelector("#hero-anime").addEventListener("mouseleave", () => {
-      gsap.to("#flag", {
-        opacity: 0,
-        duration: 0.5,
-      });
+  });
+  document.querySelector("#hero-anime").addEventListener("mouseleave", () => {
+    gsap.to("#flag", {
+      opacity: 0,
+      duration: 0.2,
     });
   });
   let vdocontainer = document.querySelector("#vdo-container");

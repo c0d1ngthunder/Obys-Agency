@@ -177,6 +177,7 @@ nav {
   width: 72%;
   margin-left: 28%;
   position: relative;
+  z-index: 1;
 }
 
 #text::before {
@@ -294,7 +295,12 @@ nav {
   margin-left: 28%;
 }
 
-#image-div-container {
+#image-div-container{
+  width: 100%;
+  position: relative;
+}
+
+.our-projects {
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -304,12 +310,12 @@ nav {
 }
 
 .page3-circle1 {
-  width: 25vw;
-  height: 25vw;
+  width: 22vw;
+  height: 22vw;
   border: 1px solid #ffffff9a;
   border-radius: 50%;
   margin-top: 50vh;
-  margin-left: 3vw;
+  margin-left: 8vw;
   position: relative;
   display: flex;
   align-items: center;
@@ -317,14 +323,14 @@ nav {
 }
 
 .page3-circle2 {
-  width: 25vw;
-  height: 25vw;
+  width: 22vw;
+  height: 22vw;
   border: 1px solid #ffffff96;
   border-radius: 50%;
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;margin-left: 3vw;
 }
 
 .page3-circle1 .circle-in,
@@ -374,58 +380,32 @@ nav {
   opacity: 1;
 }
 
+.flex .page3-circle2{
+  margin-top: 30vw;
+  margin-right: 2vw;
+  & svg{
+    transform: rotate(-90deg);
+  }
+}
+
 .effect-cont {
-  width: 25vw;
+  width: 31vw;
   margin: 1vw;
 }
+.w24{
+  width: 24vw;
+}
 
+.mt{
+  margin-top: 10vw;
+}
+.mt-neg{
+  margin-top: -10vw;
+}
 .image-div {
-  width: 25vw;
-  height: 30vw;
+  width: 100%;
   overflow: hidden;
-}
-
-.effect-cont:nth-child(2) {
-  width: 34vw;
-  height: 43vw;
-
-  & .image-div {
-    width: 34vw;
-    height: 40vw;
-  }
-}
-
-.effect-cont:nth-child(5),
-.effect-cont:nth-child(6),
-.effect-cont:nth-child(9) {
-  height: 43vw;
-  width: 32vw;
-
-  & .image-div {
-    width: 32vw;
-    height: 40vw;
-    object-fit: cover;
-  }
-}
-
-.effect-cont:nth-child(9) {
-  margin-top: 30vh;
-  position: relative;
-  right: 0px;
-}
-
-.page3-circle2:nth-child(8) {
-  margin-top: 70vh;
-  margin-left: 8vw;
-}
-
-.page3-circle2:nth-child(8) svg {
-  transform: rotate(-90deg);
-}
-
-.effect-cont:nth-child(5) {
-  margin-top: 15vw;
-}
+} 
 
 .effect-heading{
   font-size: 2.5vw;
@@ -437,18 +417,27 @@ nav {
 }
 
 .effect-footer{
-  width: 90%;
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 2vw 0;
+  margin: 2vw auto;
   font-size: 1.1vw;
 }
 .effect-cont span{
+  margin: auto;
   display: block;
   width: 95%;
   height: 1px;
   background-color: #fff;
+}
+
+.our-projects:nth-child(3){
+  justify-content: space-between;
+}
+
+.flex{
+  display: flex;
 }
 
 .effect-feat{
@@ -456,7 +445,7 @@ nav {
 }
 
 .image-div img {
-  height: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -701,6 +690,6 @@ footer>h1::before {
   opacity: 0;
   pointer-events: none;
   transition: all ease .1s;
-  transition: opacity ease .3s;
-  z-index: -1;
+  /* transition: opacity ease .2s; */
+  z-index: 0;
 }
