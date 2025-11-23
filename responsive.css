@@ -1,0 +1,36 @@
+@media only screen and (max-width: 1030px) {
+    .page3-circle1 {
+        display: none;
+    }
+
+    .page3-circle2 {
+        display: none;
+    }
+
+    .mt-neg {
+        margin-top: 0;
+    }
+
+    .mt {
+        margin-top: 0;
+    }
+
+    .effect-cont {
+        width: 47vw;
+        margin-top: 4vw;
+    }
+    .effect-heading {
+        font-size: 22px;
+        height: 4vh;
+    }
+
+    #page3 {
+        padding: 17vh 1vw;
+    }
+
+    .our-projects {
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 770px) {}

@@ -68,18 +68,22 @@ function loadingAnimation() {
 
   tl.to("#loader", {
     yPercent: -100,
-    duration: .5,
-    ease:"none",
+    duration: 0.5,
+    ease: "none",
     delay: 3.4,
   });
   tl.to("#loader", {
     display: "none",
   });
-  tl.from(".hero-text h1", {
-    yPercent: 100,
-    duration: 0.8,
-    stagger: 0.3,
-  },"-=.8");
+  tl.from(
+    ".hero-text h1",
+    {
+      yPercent: 100,
+      duration: 0.8,
+      stagger: 0.3,
+    },
+    "-=.8"
+  );
   tl.from(
     "#hero-anime h2",
     {
@@ -102,7 +106,6 @@ function customCursor() {
   let cursor = document.querySelector("#crsr");
   let flag = document.querySelector("#flag");
   document.addEventListener("mousemove", (dets) => {
-    
     // console.log(flag.getBoundingClientRect().left);
     gsap.to(cursor, {
       x: dets.x - cursor.getBoundingClientRect().width / 2,
@@ -112,13 +115,13 @@ function customCursor() {
     gsap.to(flag, {
       x: dets.x - flag.getBoundingClientRect().width / 2,
       y: dets.y - flag.getBoundingClientRect().height / 2,
-      duration: .3,
+      duration: 0.3,
     });
   });
   document.querySelector("#hero-anime").addEventListener("mousemove", () => {
     gsap.to("#flag", {
       opacity: 1,
-      duration: .2,
+      duration: 0.2,
     });
   });
   document.querySelector("#hero-anime").addEventListener("mouseleave", () => {
@@ -148,20 +151,24 @@ function customCursor() {
       if (vdo.paused) {
         vdo.style.opacity = 1;
         vdocontainer.querySelector("img").style.display = "none";
-        document.querySelector("#vdo-cursor").innerHTML = `<i class="ri-pause-fill"></i>`;
+        document.querySelector(
+          "#vdo-cursor"
+        ).innerHTML = `<i class="ri-pause-fill"></i>`;
         gsap.to("#vdo-cursor", {
-          scale:.5,
-          duration:0.5,
-        })
+          scale: 0.5,
+          duration: 0.5,
+        });
         vdo.play();
       } else {
         vdocontainer.querySelector("img").style.display = "inline-block";
         vdo.pause();
-        document.querySelector("#vdo-cursor").innerHTML = `<i class="ri-play-fill"></i>`;
+        document.querySelector(
+          "#vdo-cursor"
+        ).innerHTML = `<i class="ri-play-fill"></i>`;
         gsap.to("#vdo-cursor", {
-          scale:1,
-          duration:0.5,
-        })
+          scale: 1,
+          duration: 0.5,
+        });
         vdo.style.opacity = 0;
       }
     });
@@ -184,7 +191,7 @@ function customCursor() {
       duration: 0.5,
     });
     gsap.to(projects, {
-      scale: .8,
+      scale: 0.8,
       duration: 0.5,
     });
   });
@@ -203,11 +210,82 @@ function customCursor() {
 function sheryAnimation() {
   Shery.imageEffect(".image-div", {
     style: 5,
-    config:{"a":{"value":2.06,"range":[0,30]},"b":{"value":0.91,"range":[-1,1]},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.7666526861631143},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.37,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.2,"range":[0,10]},"metaball":{"value":0.56,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.34,"range":[0,2]},"noise_scale":{"value":9.92,"range":[0,100]}},
+    config: {
+      a: { value: 2.06, range: [0, 30] },
+      b: { value: 0.91, range: [-1, 1] },
+      zindex: { value: -9996999, range: [-9999999, 9999999] },
+      aspect: { value: 0.7666526861631143 },
+      ignoreShapeAspect: { value: true },
+      shapePosition: { value: { x: 0, y: 0 } },
+      shapeScale: { value: { x: 0.5, y: 0.5 } },
+      shapeEdgeSoftness: { value: 0, range: [0, 0.5] },
+      shapeRadius: { value: 0, range: [0, 2] },
+      currentScroll: { value: 0 },
+      scrollLerp: { value: 0.07 },
+      gooey: { value: true },
+      infiniteGooey: { value: false },
+      growSize: { value: 4, range: [1, 15] },
+      durationOut: { value: 1, range: [0.1, 5] },
+      durationIn: { value: 1.5, range: [0.1, 5] },
+      displaceAmount: { value: 0.5 },
+      masker: { value: true },
+      maskVal: { value: 1.37, range: [1, 5] },
+      scrollType: { value: 0 },
+      geoVertex: { range: [1, 64], value: 1 },
+      noEffectGooey: { value: true },
+      onMouse: { value: 1 },
+      noise_speed: { value: 0.2, range: [0, 10] },
+      metaball: { value: 0.56, range: [0, 2] },
+      discard_threshold: { value: 0.5, range: [0, 1] },
+      antialias_threshold: { value: 0, range: [0, 0.1] },
+      noise_height: { value: 0.34, range: [0, 2] },
+      noise_scale: { value: 9.92, range: [0, 100] },
+    },
     gooey: true,
   });
 }
-initScroll();
-loadingAnimation();
-customCursor();
-sheryAnimation();
+function textAnime() {
+  document.querySelectorAll(".effect-cont").forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      let text = element.querySelectorAll(".effect-heading div");
+      gsap.to(text, {
+        yPercent: -100,
+        duration: 0.5,
+        stagger: 0.1,
+      });
+    });
+    element.addEventListener("mouseleave", () => {
+      let text = element.querySelectorAll(".effect-heading div");
+      gsap.to(text, {
+        yPercent: 0,
+        duration: 0.5,
+        stagger: -0.1,
+      });
+    });
+  });
+}
+function TriggerAnimations() {
+  document.querySelectorAll(".underline").forEach((elem) => {
+    gsap.from(elem2, {
+      scale: "0",
+      transformOrigin: "right center",
+      duration: 0.8,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#page3 .underline",
+        scroller: "main",
+        markers: true,
+        start: "top 80%",
+      },
+    });
+  });
+}
+function main() {
+  initScroll();
+  loadingAnimation();
+  customCursor();
+  sheryAnimation();
+  textAnime();
+  TriggerAnimations();
+}
+window.onload = main;
