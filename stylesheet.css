@@ -139,7 +139,7 @@ main {
 
 nav {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   height: fit-content;
@@ -148,7 +148,7 @@ nav {
 
 .nav-p1 {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 15vw;
 }
 
@@ -226,7 +226,6 @@ nav {
 
 #vdo-container {
   width: 70vw;
-  height: 80vh;
   position: relative;
   left: 30%;
 }
@@ -517,6 +516,7 @@ nav {
   display: flex;
   gap: 2vw;
   margin-top: 4vw;
+  width: 100%;
 }
 
 #page4-flex img {

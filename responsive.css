@@ -31,6 +31,118 @@
     .our-projects {
         justify-content: space-between;
     }
+    nav{
+        padding: 2vw;
+        padding-bottom: 6vh;
+    }
+    #page4-flex img{
+        height: 60vh;
+    }
+    #page4-flex .txt{
+        font-size: 15px;
+        line-height: 20px;
+        width: fit-content;
+    }
 }
 
-@media only screen and (max-width: 770px) {}
+@media only screen and (max-width: 770px) {
+    .nav-p2{
+        display: none;
+    }
+    nav p{
+        display: none;
+    }
+    .nav-p1{
+        width: 100%;
+    }
+    .nav-p1 .svg-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #text{
+        margin: 0;
+        margin-left: 30px;
+        margin-top: 150px;
+    }
+    .hero-text h1,.hero-text h2{
+        font-size: 60px;
+        line-height: 65px;
+    }
+    #text::before{
+        top: -15%;
+        left: 1%;
+    }
+    #vdo-container {
+        width: 100%;
+        left: 0;
+    }
+    #page3>h1{
+        width: 100%;
+        margin: 0;
+    }
+    #page3 .underline{
+        margin-left: 0;
+    }
+    #page3{
+        padding: 2vw;
+    }
+    #page3>h1::before{
+        top: -50%;
+        left: 1%;
+    }
+    .effect-cont{
+        width: 100%;
+    }
+    .effect-footer{
+        width: 100%;
+    }
+    .effect-cont span{
+        width: 100%;
+    }
+    #page4-content{
+        left: 0;
+        width: 100%;
+        padding: 3vw;
+    }
+    #page4-content h1::before{
+        top: -60%;
+        left: 1%;
+    }
+    #page4{
+        margin-top: 30vw;
+    }
+    #page4-flex{
+        flex-direction: column-reverse;
+    }
+    #page4-flex .txt{
+        width: 45%;
+    }
+    #page4-content>p:nth-child(3){
+        font-size: 25px;
+        width: 60%;
+        margin-top: 10vh;
+    }
+    #page4-flex img{
+        width: 100%;
+        height: auto;
+    }
+    #blue-div{
+        width: 100%;
+        margin: 0;
+    }
+    .blue-elem p, .blue-elem h4{
+        font-size: 15px;
+    }
+    .blue-elem{
+        padding: 20px;
+    }
+    footer{
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+    .box h5{
+        font-size: 15px;
+    }
+}
