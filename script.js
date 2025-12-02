@@ -265,20 +265,68 @@ function textAnime() {
   });
 }
 function TriggerAnimations() {
+  document.querySelectorAll(".slide h1").forEach((elem) => {
+    gsap.from(elem, {
+      yPercent: 100,
+      duration: 0.8,
+      ease: "circ.out",
+      scrollTrigger: {
+        trigger: elem,
+        scroller: "main",
+        start: "top 80%",
+      },
+      onComplete: ()=>{
+        gsap.set(elem.parentElement, {overflow:"visible"});
+      }
+    });
+  });
   document.querySelectorAll(".underline").forEach((elem) => {
-    gsap.from(elem2, {
+    gsap.from(elem, {
       scale: "0",
       transformOrigin: "right center",
-      duration: 0.8,
-      ease: "none",
+      duration: 2,
+      ease: "expo.out",
       scrollTrigger: {
-        trigger: "#page3 .underline",
+        trigger: elem,
         scroller: "main",
-        markers: true,
         start: "top 80%",
       },
     });
   });
+  document.querySelectorAll(".effect-cont").forEach((element) => {
+      let text = element.querySelectorAll(".effect-heading div");
+      gsap.from(text, {
+        yPercent: 100,
+        duration: 0.5,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: element,
+          scroller: "main",
+          start: "top 80%",
+        }
+      });
+      let footer = element.querySelector(".effect-footer")
+      gsap.from(footer, {
+        opacity: 0,
+        duration: 0.8,
+        scrollTrigger: {  
+          trigger:footer,
+          scroller: "main",
+          start: "top 90%",
+        }
+      });
+      let line = element.querySelector(".effect-cont span")
+      gsap.from(line, {
+        scaleX:0,
+        transformOrigin:"right center",
+        duration: 1,
+        scrollTrigger: {  
+          trigger:line,
+          scroller: "main",
+          start: "top 90%",
+        }
+      });
+});
 }
 function main() {
   initScroll();
