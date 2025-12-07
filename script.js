@@ -1,5 +1,6 @@
 function initScroll() {
   gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(SplitText);
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("main"),
     smooth: true,
@@ -273,11 +274,11 @@ function TriggerAnimations() {
       scrollTrigger: {
         trigger: elem,
         scroller: "main",
-        start: "top 80%",
+        start: "top 90%",
       },
-      onComplete: ()=>{
-        gsap.set(elem.parentElement, {overflow:"visible"});
-      }
+      onComplete: () => {
+        gsap.set(elem.parentElement, { overflow: "visible" });
+      },
     });
   });
   document.querySelectorAll(".underline").forEach((elem) => {
@@ -294,39 +295,76 @@ function TriggerAnimations() {
     });
   });
   document.querySelectorAll(".effect-cont").forEach((element) => {
-      let text = element.querySelectorAll(".effect-heading div");
-      gsap.from(text, {
-        yPercent: 100,
-        duration: 0.5,
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: element,
-          scroller: "main",
-          start: "top 80%",
-        }
-      });
-      let footer = element.querySelector(".effect-footer")
-      gsap.from(footer, {
-        opacity: 0,
-        duration: 0.8,
-        scrollTrigger: {  
-          trigger:footer,
-          scroller: "main",
-          start: "top 90%",
-        }
-      });
-      let line = element.querySelector(".effect-cont span")
-      gsap.from(line, {
-        scaleX:0,
-        transformOrigin:"right center",
-        duration: 1,
-        scrollTrigger: {  
-          trigger:line,
-          scroller: "main",
-          start: "top 90%",
-        }
-      });
-});
+    let text = element.querySelectorAll(".effect-heading div");
+    gsap.from(text, {
+      yPercent: 100,
+      duration: 0.5,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: element,
+        scroller: "main",
+        start: "top 80%",
+      },
+    });
+    let footer = element.querySelector(".effect-footer");
+    gsap.from(footer, {
+      opacity: 0,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: footer,
+        scroller: "main",
+        start: "top 90%",
+      },
+    });
+    let line = element.querySelector(".effect-cont span");
+    gsap.from(line, {
+      scaleX: 0,
+      transformOrigin: "right center",
+      duration: 1,
+      scrollTrigger: {
+        trigger: line,
+        scroller: "main",
+        start: "top 90%",
+      },
+    });
+  });
+  ["footer h1", "footer .box", "#page4-content p"].forEach((selector) => {
+    gsap.from(selector, {
+      opacity: 0,
+      duration: 0.6,
+      yPercent: 10,
+      scrollTrigger: {
+        trigger: selector,
+        scroller: "main",
+        start: "top 80%",
+      },
+    });
+  });
+  [".page3-circle1", ".page3-circle2"].forEach((selector) => {
+    gsap.from(selector, {
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: selector,
+        scroller: "main",
+        start: "top 70%",
+      },
+    });
+  });
+  let split = SplitText.create("#page4-content>p", {
+    type: "lines",
+    mask: "lines",
+  });
+  gsap.from(split.lines, {
+    yPercent: 100,
+    duration: .6,
+    scrollTrigger: {
+      trigger: "#page4-content p",
+      scroller: "main",
+      start: "top 80%",
+    },
+    stagger: 0.1,
+  });
 }
 function main() {
   initScroll();
