@@ -364,6 +364,7 @@ function TriggerAnimations() {
       start: "top 80%",
     },
     stagger: 0.1,
+    onComplete:()=> {split.revert();}
   });
 }
 function main() {
@@ -372,6 +373,8 @@ function main() {
   customCursor();
   sheryAnimation();
   textAnime();
-  TriggerAnimations();
+  if (window.innerWidth > 768){
+    TriggerAnimations();
+  }
 }
 window.onload = main;

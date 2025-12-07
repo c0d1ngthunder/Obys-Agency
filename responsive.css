@@ -19,6 +19,7 @@
         width: 47vw;
         margin-top: 4vw;
     }
+
     .effect-heading {
         font-size: 22px;
         height: 4vh;
@@ -31,14 +32,17 @@
     .our-projects {
         justify-content: space-between;
     }
-    nav{
+
+    nav {
         padding: 2vw;
         padding-bottom: 6vh;
     }
-    #page4-flex img{
+
+    #page4-flex img {
         height: 60vh;
     }
-    #page4-flex .txt{
+
+    #page4-flex .txt {
         font-size: 15px;
         line-height: 20px;
         width: fit-content;
@@ -46,103 +50,208 @@
 }
 
 @media only screen and (max-width: 770px) {
-    .nav-p2{
+    .nav-p2 {
         display: none;
     }
-    nav p{
+
+    nav p {
         display: none;
     }
-    .nav-p1{
+
+    .nav-p1 {
         width: 100%;
     }
-    .nav-p1 .svg-container{
+
+    .nav-p1 .svg-container {
         width: 100%;
         display: flex;
         justify-content: space-between;
     }
-    #text{
+
+    #text {
         margin: 0;
         margin-left: 30px;
         margin-top: 150px;
     }
-    .hero-text h1,.hero-text h2{
+
+    .hero-text h1,
+    .hero-text h2 {
         font-size: 60px;
         line-height: 65px;
     }
-    #text::before{
+
+    #text::before {
         top: -15%;
         left: 1%;
     }
+
     #vdo-container {
         width: 100%;
         left: 0;
     }
-    #page3>h1{
+
+    #page3>h1 {
         width: 100%;
         margin: 0;
     }
-    #page3 .underline{
+
+    #page3 .underline {
         margin-left: 0;
     }
-    #page3{
+
+    #page3 {
         padding: 2vw;
     }
-    #page3>h1::before{
+
+    #page3>h1::before {
         top: -50%;
         left: 1%;
     }
-    .effect-cont{
+
+    .effect-cont {
         width: 100%;
     }
-    .effect-footer{
+
+    .effect-footer {
         width: 100%;
     }
-    .effect-cont span{
+
+    .effect-cont span {
         width: 100%;
     }
-    #page4-content{
+
+    #page4-content {
         left: 0;
         width: 100%;
         padding: 3vw;
     }
-    #page4-content h1::before{
+
+    #page4-content h1::before {
         top: -60%;
         left: 1%;
     }
-    #page4{
+
+    #page4 {
         margin-top: 30vw;
     }
-    #page4-flex{
+
+    #page4-flex {
         flex-direction: column-reverse;
     }
-    #page4-flex .txt{
+
+    #page4-flex .txt {
         width: 45%;
     }
-    #page4-content>p:nth-child(3){
+
+    #page4-content>p:nth-child(3) {
         font-size: 25px;
         width: 60%;
         margin-top: 10vh;
     }
-    #page4-flex img{
+
+    #page4-flex img {
         width: 100%;
         height: auto;
     }
-    #blue-div{
+
+    #blue-div {
         width: 100%;
         margin: 0;
     }
-    .blue-elem p, .blue-elem h4{
+
+    .blue-elem p,
+    .blue-elem h4 {
         font-size: 15px;
     }
-    .blue-elem{
+
+    .blue-elem {
         padding: 20px;
     }
-    footer{
+
+    footer {
         width: 100%;
         margin: 0;
         padding: 20px;
+        margin-bottom: 10px;
     }
-    .box h5{
-        font-size: 15px;
+
+    footer h1::before {
+        top: -40%;
+        left: 0%;
+    }
+
+    #footer-div {
+        flex-direction: column;
+    }
+
+    .box {
+        margin-bottom: 30px;
+    }
+    #page5{
+        min-height: fit-content;
+        margin-bottom: 70px;
+    }
+    .box h5 {
+        font-size: 18px;
+    }
+
+    .box h6 {
+        font-size: 22px;
+        line-height: normal;
+    }
+
+    #crsr {
+        display: none;
+    }
+
+    #page3 .slide {
+        margin-left: 0;
+    }
+
+    #page3 h1::before {
+        left: 2%;
+        top: -40%;
+    }
+    
+    .all-projects{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #page4-content p:nth-child(3) {
+        width: 100%;
+    }   
+    #page4-content .txt{
+        width: 60%;
+    } 
+    .elem h1, .elem2 h1{
+        font-size: 50px;
+        line-height: 50px;
+    }
+    #text{
+        margin-left: 20px;
+        width: 100%;
+        margin-top: 0;
+    }
+    .hero-text h1, .hero-text h2{
+        font-size: 40px;
+        line-height: 45px;
+    }
+    #page1{
+        height: fit-content;   
+    }
+    #page2{
+        height: fit-content;
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+    #vdo-container{
+        width: 200%;
+        margin-left: -50%;
+    }
+    #page3{
+        margin-top: 100px;
     }
 }
