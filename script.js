@@ -357,14 +357,83 @@ function TriggerAnimations() {
   });
   gsap.from(split.lines, {
     yPercent: 100,
-    duration: .6,
+    duration: 0.6,
     scrollTrigger: {
       trigger: "#page4-content p",
       scroller: "main",
       start: "top 80%",
     },
     stagger: 0.1,
-    onComplete:()=> {split.revert();}
+    onComplete: () => {
+      split.revert();
+    },
+  });
+}
+function footerAnimation() {
+  const string = "Let’s Create";
+  const textContainer = document.querySelector(".heading-cont");
+  const headings = textContainer.querySelectorAll("h1");
+  let split1 = SplitText.create(headings[0], { type: "chars" });
+  let split2 = SplitText.create(headings[1], { type: "chars" });
+  gsap.to(split2.chars, {
+    opacity: 0,
+  });
+  textContainer.addEventListener("mouseenter", () => {
+    gsap.fromTo(
+      split1.chars,
+      {
+        opacity: 1,
+      },
+      {
+        opacity: 0,
+        duration: 0.07,
+        stagger: 0.07,
+      }
+    );
+    gsap.to(split2.chars, {
+      opacity: 1,
+      fontFamily: "silkserif-lightitalic",
+      duration: 0.07,
+      delay: 0.15,
+      stagger: 0.07,
+      top: "-10%",
+    });
+    gsap.to("svg.arrow", {
+      x: 30,
+      duration: 0.5,
+      delay:.6
+    });
+  });
+  textContainer.addEventListener("mouseleave", () => {
+    gsap.fromTo(
+      split1.chars,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 0.07,
+        stagger: 0.07,
+        delay: 0.15,
+      }
+    );
+    gsap.fromTo(
+      split2.chars,
+      {
+        opacity: 1,
+      },
+      {
+        opacity: 0,
+        duration: 0.07,
+        stagger: 0.07,
+        top: "-10%",
+      }
+    );
+    gsap.to("svg.arrow", {
+      x: 0,
+      duration: 0.5,
+      delay:.6
+    });
   });
 }
 function main() {
@@ -373,8 +442,11 @@ function main() {
   customCursor();
   sheryAnimation();
   textAnime();
-  if (window.innerWidth > 768){
+  footerAnimation();
+  if (window.innerWidth > 768) {
     TriggerAnimations();
   }
+  const video = document.querySelector("#vdo-container video");
+  video.load();
 }
 window.onload = main;

@@ -165,6 +165,7 @@ nav {
 
 #hero-anime {
   display: flex;
+  width: fit-content;
 }
 
 .hero-text:nth-child(1) {
@@ -638,7 +639,7 @@ footer>.underline {
   margin: 2vw 0;
 }
 
-footer>h1 {
+footer h1 {
   font-size: 8vw;
   font-weight: 500;
   font-family: "plain-regular";
@@ -671,7 +672,7 @@ footer>h1 {
   line-height: 2vw;
 }
 
-footer>h1::before {
+footer>#footer-head::before {
   content: "04";
   position: absolute;
   font-size: 3.5vw;
@@ -705,4 +706,27 @@ footer>h1::before {
 
 #page3 .slide {
   margin-left: 28%;
+}
+
+#footer-head svg {
+  height: 7vw;
+  width: 6vw;
+  rotate: -90deg;
+  margin-left: 3.5vw;
+}
+
+#footer-head {
+  position: relative;
+  /* display: -webkit-box;
+  display: -ms-flexbox; */
+  display: flex;
+  align-items: center;
+}
+
+.heading-cont .heading2 {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px white !important;
 }
