@@ -199,6 +199,9 @@
         font-size: 22px;
         line-height: normal;
     }
+    .link-cont{
+        height: 3.3vw;
+    }
 
     #crsr {
         display: none;
@@ -253,5 +256,8 @@
     }
     #page3{
         margin-top: 100px;
+    }
+    .link-cont{
+        height: 5vw;
     }
 }

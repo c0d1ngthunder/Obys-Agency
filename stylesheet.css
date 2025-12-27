@@ -730,3 +730,8 @@ footer>#footer-head::before {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px white !important;
 }
+.link-cont{
+  width: fit-content;
+  height: 2vw;
+  overflow: hidden;
+}

@@ -386,16 +386,16 @@ function footerAnimation() {
       },
       {
         opacity: 0,
-        duration: 0.07,
-        stagger: 0.07,
+        duration: 0.08,
+        stagger: .05,
       }
     );
     gsap.to(split2.chars, {
       opacity: 1,
       fontFamily: "silkserif-lightitalic",
-      duration: 0.07,
+      duration: 0.08,
       delay: 0.15,
-      stagger: 0.07,
+      stagger: .05,
       top: "-10%",
     });
     gsap.to("svg.arrow", {
@@ -412,8 +412,8 @@ function footerAnimation() {
       },
       {
         opacity: 1,
-        duration: 0.07,
-        stagger: 0.07,
+        duration: 0.08,
+        stagger: .05,
         delay: 0.15,
       }
     );
@@ -424,8 +424,8 @@ function footerAnimation() {
       },
       {
         opacity: 0,
-        duration: 0.07,
-        stagger: 0.07,
+        duration: 0.08,
+        stagger: .05,
         top: "-10%",
       }
     );
@@ -436,6 +436,21 @@ function footerAnimation() {
     });
   });
 }
+function footerLinks() {
+  const links = document.querySelectorAll(".link-cont")
+  links.forEach((link,idx)=>{
+    link.addEventListener("mouseenter",(dets)=>{
+      gsap.to(link.querySelectorAll("h6"),{
+        y:"-100%"
+      })
+    })
+    link.addEventListener("mouseleave",(dets)=>{
+      gsap.to(link.querySelectorAll("h6"),{
+        y:"0%"
+      })
+    })
+  })
+}
 function main() {
   initScroll();
   loadingAnimation();
@@ -443,6 +458,7 @@ function main() {
   sheryAnimation();
   textAnime();
   footerAnimation();
+  footerLinks()
   if (window.innerWidth > 768) {
     TriggerAnimations();
   }
