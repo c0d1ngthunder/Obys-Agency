@@ -441,7 +441,7 @@ function footerLinks() {
   links.forEach((link,idx)=>{
     link.addEventListener("mouseenter",(dets)=>{
       gsap.to(link.querySelectorAll("h6"),{
-        y:"-100%"
+        y:"-105%"
       })
     })
     link.addEventListener("mouseleave",(dets)=>{
